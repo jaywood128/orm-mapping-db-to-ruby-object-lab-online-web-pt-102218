@@ -93,7 +93,7 @@ end
       FROM students
       WHERE grade = ?
           SQL
-    DB[:conn].excute(sql, x).map do |row|
+    DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
     end
   end
