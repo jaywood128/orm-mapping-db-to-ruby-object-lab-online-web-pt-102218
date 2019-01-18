@@ -68,7 +68,7 @@ end
         WHERE grade = ?
         SQL
         binding.pry
-    DB[:conn].execute(sql, self.grade).map do |row|
+    DB[:conn].execute(sql, self).map do |row|
       self.new_from_db(row)
     end
 
