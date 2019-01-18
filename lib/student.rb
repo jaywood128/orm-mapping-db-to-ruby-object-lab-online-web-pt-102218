@@ -69,7 +69,6 @@ end
         SQL
 
     DB[:conn].execute(sql, 10).map do |row|
-      binding.pry
       x.times {self.new_from_db(row)}
     end
 
