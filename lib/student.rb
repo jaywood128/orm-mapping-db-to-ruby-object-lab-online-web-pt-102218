@@ -70,7 +70,7 @@ end
 
     DB[:conn].execute(sql, 10).map do |row|
       binding.pry
-      self.new_from_db(row)
+      x.times self.new_from_db(row)
     end
 
   end
